@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* theme changer */
+
+:root {
+  --bg-primary-light: #9db3ed;
+  --bg-secondary-light: #f9f9f9;
+  --text-primary-light: #0b1537;
+  --text-secondary-light: #636363;
+
+  --bg-primary-dark: #172d67;
+  --bg-secondary-dark: #050c26;
+  --text-primary-dark: #fbfcfc;
+  --text-secondary-dark: #bbbcbc;
+}
+
+.light {
+  --text-primary: var(--text-primary-light);
+  --text-secondary: var(--text-secondary-light);
+  --bg-primary: var(--bg-primary-light);
+  --bg-secondary: var(--bg-secondary-light);
+}
+
+.dark {
+  --text-primary: var(--text-primary-dark);
+  --text-secondary: var(--text-secondary-dark);
+  --bg-primary: var(--bg-primary-dark);
+  --bg-secondary: var(--bg-secondary-dark);
+}
+/* theme changer */
+
+.app {
+  height: 100vh;
+  font-family: sans-serif;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #2a6c84;
+}
+
+/* scrollbar */
+
+::-webkit-scrollbar {
+  height: 5px;
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.14);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: gray;
+}
+
+/* scrollbar */
+
+.calc {
+  height: 80%;
+  min-height: 300px;
+  width: 50vw;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 30px;
+  box-shadow: 1px -1px 20px rgba(0, 0, 0, 0.15);
+  overflow: auto;
+  color: var(--text-primary);
+}
+
+/* screen styling */
+
+.screen {
+  min-height: 100px;
+  padding: 1rem 2rem;
+  flex: 1;
+  position: relative;
+  overflow-y: scroll;
+
+  font-size: 1.2rem;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.screen .history {
+  margin-bottom: 3rem;
+  font-size: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.screen .toggler {
+  border: none;
+  cursor: pointer;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  right: 100%;
+}
+
+.screen div {
+  text-align: end;
+}
+
+/* keypad styling */
+
+.keypad {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  background-color: var(--bg-secondary);
+}
+
+.keypad button {
+  flex-basis: calc(25% - 1rem);
+  border: none;
+  outline: none;
+  font-size: 1.8rem;
+  background-color: transparent;
+  color: var(--text-secondary);
+  transition: 200ms;
+  user-select: none;
+  cursor: pointer;
+}
